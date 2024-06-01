@@ -1,4 +1,5 @@
-require "renas.remap"
 require "renas.lazy"
+require "renas.remap"
 require "renas.set"
 require "renas.colors"
+require "renas.config"

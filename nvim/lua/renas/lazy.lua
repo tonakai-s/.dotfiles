@@ -12,23 +12,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	{
-		--Treesitter Parser
-		"nvim-treesitter/nvim-treesitter",
-		build = ":TSUpdate",
-		config = function ()
-			local configs = require("nvim-treesitter.configs")
-			configs.setup({
-				ensure_installed = { "c", "lua", "javascript", "rust", "markdown" },
-				sync_install = false,
-				highlight = { enable = true },
-				indent = { enable = true }
-			})
-		end
-	},
-	{
-		"catppuccin/nvim",
-		name = "catppuccin",
-		priority = 1000
-	}
+    require("plugins.treesitter"),
+    require("plugins.catppuccin"),
+    require("plugins.oxocarbon"),
+    require("plugins.lualine"),
+    require("plugins.telescope"),
+    require("plugins.mason-lspconfig"),
+    require("plugins.nvim-cmp"),
 })
