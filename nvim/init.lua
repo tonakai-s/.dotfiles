@@ -1,1 +1,7 @@
-require "renas.init"
+require("config.editor")
+require("config.remap")
+require("config.lazy")
+require("config.nightfox")
+require("config.telescope-remap")
+require("config.harpoon")
+require("config.coc")
